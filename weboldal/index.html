@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labirintus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="angol.html">English</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Üdvözöljük a weboldalon</h1>
+    <p id="labirintus">Labirintus használati útmutató</p>
+  </main>
+
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+    <p>A játék elindítása után a nyelvválasztó menü fogad minket. Nyilak mozgatásával ki lehet választani, hogy milyen nyelven szeretnénk játszani, majd enterrel meg kell erősíteni azt.</p>
+  </div>
+  <div class="column"  style="background-color: #bbb;">
+    <img class="img" src="1.png" alt="">
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <p>Miután kiválasztottuk a nyelvet, a főmenü fogad minket. Itt lehetőségünk van már meglévő térképet generálni, újat létrehozni, másik nyelvet választani, vagy kilépni a játékból. A menüben szintén a nyilak mozgatásával lehet irányítani.</p>
+  </div>
+  <div class="column"  style="background-color: #bbb;">
+    <img class="img" src="2.png" alt="">
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <p>Ha térképet szeretnénk kiválasztani, akkor meg fog jelenni előttünk az összes file, ami térképet tartalmazhat. Nyilak mozgatásával és az enter lenyomásával szeretnénk a számunkra tetsző térképet kiválasztani, valamint lehetőségünk van visszamenni a főmenübe is.</p>
+  </div>
+  <div class="column"  style="background-color: #bbb;">
+    <img class="img" src="3.png" alt="">
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <p>Ha véletlen a file üres, akkor ezután kiír egy hibaüzenetet és lehetőségünk van új térképet kiválasztani.</p>
+  </div>
+  <div class="column"  style="background-color: #bbb;">
+    <img class="img" src="4.png" alt="">
+  </div>
+  </div>
+<br>
+
+<br>
+<br>
+
+  
+  <img class="kep" src="5.png" alt="">
+  <br>
+  
+<div class="row">
+    <div style="background-color:#aaa; padding: 1px;">
+    <p>Ha sikerült a számunkra tetszőleges térképet kiválasztanunk, akkor meg fog előttünk jelenni a térkép, és a hozzá tartozó instrukciók.</p>
+    <p>A térképen a nyilak mozgatásával tudunk haladni. Ha szeretnénk egy számunkra szimpatikus pályaelemet változtatni, akkor fontos hogy a kurzor afelett a karakter felett legyen, amelyiket szeretnénk megváltoztatni. Ezután a képen látható billentyűk lenyomásával különböző pályaelemeket tudunk elhelyezni, vagy kitörölni.</p>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  <p>Lehetőségünk van a pálya méreteinek megváltoztatására, ha lenyomjuk az entert. Ezután meg kell adjuk a pálya új méreteit. Fontos, hogy a pálya méretei (szélesség, magasság) minimum 10-es szélességűek kell legyenek. Ha ennél kisebbet adunk meg, akkor az alábbi hibaüzenet jelenik meg:</p>
+</div>
+<div class="column"  style="background-color: #bbb;">
+  <img class="img" src="6.png" alt="">
+</div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <p>Valamint fontos megemlíteni, hogy a program figyelmeztet a pálya méreteinek megváltoztatásánál, mert ha a pálya méreteit szeretnénk csökkenteni, akkor bizonyos pályaelemek elvesznek, és visszacsinálni nem lehet őket. Erre a program figyelmeztet minket:</p>
+    <p>Valamint, ha mégse szeretnénk a pálya méretein változtatni, akkor szélességnek és magasságnak is 0 értéket kell megadni. Üresen nem hagyhatjuk egyiket se, mert a program nem fog minket tovább engedni.</p>
+  </div>
+<div class="column"  style="background-color: #bbb;">
+  <img style="width: 1200px;" class="img" src="7.png" alt="">
+</div>
+</div>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <p>Ha végeztünk a pálya szerkesztésével, akkor lehetőségünk van elmenteni, ha megnyomjuk az F12-es gombot.</p>
+    <p>Ha nem akarunk menteni, de szeretnénk még a pályán szerkeszteni, akkor a „Vissza a szerkesztőbe” opciót kell választani. Ha nem szeretnénk elmenteni a pálya állapotát, akkor a „Nem” opciót kell választani, és a program vissza fog minket vinni a főmenübe.</p>
+  </div>
+<div class="column"  style="background-color: #bbb;">
+  <img class="img" src="8.png" alt="">
+</div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <p>Ha menteni szeretnénk, akkor az „Igen” opciót kell kiválasztani. Ezután meg kell adnunk a file nevét, ahova szeretnénk elmenteni a térképünket, hogy aztán később visszatölthessük. Fontos dolog, hogy nem kell megadnunk semmilyen file kiterjesztést, azt a program magától odateszi. Szintén fontos dolog, hogy ha egy olyan file nevét adjuk meg, ami már nem üres, akkor a programunk annak tartalmát felül fogja írni a jelenlegi térképünkkel. Erre érdemes odafigyelni!</p>
+    <p>Ha sikeresen mentettünk, akkor a program ezt tudtunkra adja, és bármelyik gomb lenyomásával újra a főmenüben fogjuk találni magunkat.</p>
+  </div>
+<div class="column"  style="background-color: #bbb;">
+  <img style="height: 130px; width: 100%;" src="9.png" alt="">
+</div>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <p>Amennyiben új pályát szeretnénk létrehozni, akkor először meg kell adjuk a pálya magasságát, és utána a szélességét. Fontos itt is megjegyezni, hogy a pálya méretei minimum 10-es nagyságúak kell hogy legyenek, mert különben a program nem fogja engedni, hogy létrehozzuk a térképet. Példa:</p>
+    <p>Ezesetben újra meg kell adjuk a pálya méreteit addig míg 10-nél nagyobb számokat adunk meg.</p>
+  </div>
+<div class="column"  style="background-color: #bbb;">
+  <img style="height: 130px; width: 100%;" src="10.png" alt="">
+</div>
+</div>
+<br>
+<br>
+
+<p style="text-align: center;" >Ha létrehoztuk a kívánt méretű térképet, akkor meg fog előttünk jelenni az üres térkép.</p>
+<img class="kep" src="uresterkep.jpg" alt="">
+<p style="text-align: center; color: red;">Ezen kívül fontos megemlíteni, hogyha nincs terem a pályán, vagy nincs be-, és kijárat, akkor a program nem fogja engedni, hogy elmentsük a térképet. Erre érdemes odafigyelni!</p>
+<br>
+
+  <footer>
+    <p>&copy; 2023 weboldal</p>
+  </footer>
+</body>
+</html>
