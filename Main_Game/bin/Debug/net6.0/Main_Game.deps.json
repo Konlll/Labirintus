@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Main_Game/1.0.0": {
+        "runtime": {
+          "Main_Game.dll": {}
+        },
+        "resources": {
+          "en-GB/Main_Game.resources.dll": {
+            "locale": "en-GB"
+          },
+          "hu-HU/Main_Game.resources.dll": {
+            "locale": "hu-HU"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Main_Game/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
