@@ -378,6 +378,7 @@ namespace Menu
         
         public void Move()
         {
+
             coords = this.Mz.GetRandomEntrance()[rnd.Next(this.Mz.GetRandomEntrance().Count)];
             this.posX = coords.Item2;
             this.posY = coords.Item1 + 2;
@@ -413,6 +414,8 @@ namespace Menu
                     case ConsoleKey.K:
                         this.SaveMap();
                         break;
+                   default:
+                        break;
 
                 }
                 if (this.Mz.Map[clamp(NewPosY - 2, 0, this.Mz.Map.GetLength(0) - 1), clamp(NewPosX, 0, this.Mz.Map.GetLength(1) - 1)] != '.')
@@ -443,7 +446,8 @@ namespace Menu
         private void Timer_Elapsed(object? sender, tm.ElapsedEventArgs e)
         {
             Console.SetCursorPosition(0, 0);
-            Console.Write($"Pálya neve: {this.Mz.FileName}, mérete: {this.Mz.Map.GetLength(0)} sor x {this.Mz.Map.GetLength(1)} oszlop\n Felfedezett termek száma: {this.RoomsFound()}\t{secs}\t {{0}}",string.Join(",", Program.routeDict[this.Mz.Map[this.posY-2,this.posX]]));
+            string CurrentRoute = string.Join(',',Program.routeDict[this.Mz.Map[this.posY-2,this.posX]]);
+            Console.Write($"Pálya neve: {this.Mz.FileName}, mérete: {this.Mz.Map.GetLength(0)} sor x {this.Mz.Map.GetLength(1)} oszlop\n Felfedezett termek száma: {this.RoomsFound()}\t{secs}\t {CurrentRoute.Replace(CurrentRoute,CurrentRoute)}");
             secs--;
         }
 
@@ -473,15 +477,40 @@ namespace Menu
 
         void Exit()
         {
-            if(IsAtEntrace())
+            if(!IsAtEntrace())
+            {
+                return;
+            }
+            if(!(Counter < Method.GetRoomNumber(this.Mz.Map)))
             {
                 Console.SetCursorPosition(0,Console.WindowHeight-3);
-                Console.Write("KKKKKK");
+                Console.Write(Program.rm.GetString("ExitSuccess"));
+                Thread.Sleep(3000);
+                this.Mz.Dispose();
+                this.Dispose();
+                Program.MainMenu();
+                
             }
+            Console.SetCursorPosition(0, Console.WindowHeight - 3);
+            Console.Write(Program.rm.GetString("Exit"));
+            switch(Console.ReadKey(true).Key)
+                {
+                    case ConsoleKey.Y:
+                    this.Mz.Dispose();
+                    this.Dispose();
+                    Program.MainMenu();
+                    break;
+                    case ConsoleKey.N:
+                    Console.SetCursorPosition(0, Console.WindowHeight - 3);
+                    Console.Write(new string(' ',Console.WindowWidth));
+                    leftFromStart = false;
+                        return;
+                    default:
+                        return;
+
+                }
+
             
-            //this.Mz.Dispose();
-            //this.Dispose();
-            //Program.MainMenu();
         }
         bool IsAtEntrace()
         {
